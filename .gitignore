@@ -30,6 +30,10 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+/worker/.wrangler
+/worker/node_modules
+/worker/*.vars
+
 # env files (can opt-in for committing if needed)
 .env*
 

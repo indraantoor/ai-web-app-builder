@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ai-web-app-builder-recording",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-06-07",
+  "kv_namespaces": [
+    {
+      "binding": "METADATA",
+      "id": "9192c913dae243b3b79db5efa333553f",
+    },
+  ],
+  "r2_buckets": [
+    {
+      "binding": "FILES",
+      "bucket_name": "ai-web-app-builder-files",
+    },
+  ],
+}
