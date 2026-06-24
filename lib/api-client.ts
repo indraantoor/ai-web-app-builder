@@ -8,7 +8,7 @@ export interface ApiError {
   code: string;
 }
 
-type GetTokenFunction = () => Promise<string> | null;
+type GetTokenFunction = () => Promise<string | null>;
 
 async function authenticatedFetch<T>(
   getToken: GetTokenFunction,

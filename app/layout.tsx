@@ -1,8 +1,8 @@
 import Providers from "@/components/providers";
+import type { Theme } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { cookies } from "next/headers";
-import type { Theme } from "@/components/theme-provider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -35,22 +35,6 @@ export default async function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased ${isDark ? "dark" : ""}`}
       suppressHydrationWarning
     >
-      <head>
-        <script
-          id="theme-initializer"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const theme = localStorage.getItem('theme') || 'dark';
-                  const isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-                  document.documentElement.classList.toggle('dark', isDark);
-                } catch (e) {}
-              })();
-            `
-          }}
-        />
-      </head>
       <body className="min-h-full flex flex-col">
         <Providers initialTheme={theme}>{children}</Providers>
       </body>
