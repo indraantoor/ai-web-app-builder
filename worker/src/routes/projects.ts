@@ -19,15 +19,15 @@ projectRoutes.get("/", async (c) => {
   }
 
   const projects = await Promise.all(
-    projectIds.map((projectId) =>
+    projectIds.map((projectId: string) =>
       c.env.METADATA.get<Project>(`project:${projectId}`, "json"),
     ),
   );
 
   const validProjects = projects
-    .filter((p): p is Project => p !== null)
+    .filter((p: Project | null): p is Project => p !== null)
     .sort(
-      (a, b) =>
+      (a: Project, b: Project) =>
         new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime(),
     );
 
