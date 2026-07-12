@@ -1,8 +1,15 @@
-<center><h1>AI Web App Builder</h1></center>
+# AI Web App Builder
+
+<img width="1779" height="870" alt="Screenshot 2026-07-12 at 9 44 24 AM" src="https://github.com/user-attachments/assets/0451b0ca-c8a4-40a3-a699-3cc67d8b401b" />
+
 
 > **An AI powered full stack web application builder inspired by Lovable.**
 >
-> Generate React applications from natural language, edit them with AI, preview changes live, restore previous versions, export complete projects, and deploy it.
+> Generate web applications from natural language, edit them with AI, preview changes live, restore previous versions, export complete projects, and deploy it.
+
+
+https://github.com/user-attachments/assets/c8b80938-9743-4bab-b724-0742bdb55664
+
 
 # Features
 
@@ -186,17 +193,24 @@ Describe an application in plain English.
 
 The selected model generates React code, streams files into the editor, updates the preview, and stores each generation as a new version.
 
+<img width="1779" height="870" alt="Screenshot 2026-07-12 at 9 47 16 AM" src="https://github.com/user-attachments/assets/14d84181-7c64-4f71-adc4-31af6197dece" />
+
 ---
 
 ## Live Preview
 
 Applications run inside Sandpack allowing instant previews without leaving the browser.
 
+<img width="1779" height="870" alt="Screenshot 2026-07-12 at 9 48 15 AM" src="https://github.com/user-attachments/assets/2c161e81-a0af-4d95-9b44-76b3fbb2357d" />
+
 ---
 
 ## Monaco Editor
 
 Browse and edit every generated file using Monaco.
+
+<img width="1779" height="870" alt="Screenshot 2026-07-12 at 9 49 43 AM" src="https://github.com/user-attachments/assets/66d0b3cb-2317-4ce5-9e0b-9b134e735307" />
+
 
 ---
 
@@ -209,6 +223,9 @@ Every generation creates a snapshot.
 - View diffs between files
 - Track prompts
 
+<img width="1779" height="870" alt="Screenshot 2026-07-12 at 9 50 21 AM" src="https://github.com/user-attachments/assets/5c6d52f7-6005-4fa6-90f0-064d09981028" />
+
+
 ---
 
 ## Auto Heal
@@ -219,7 +236,7 @@ Maximum retry attempts: **3**
 
 ---
 
-## Image-to-UI
+## Image to UI
 
 Paste screenshots or upload designs.
 
