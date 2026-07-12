@@ -206,7 +206,7 @@ Every generation creates a snapshot.
 
 - Restore any version
 - Compare changes
-- View diffs
+- View diffs between files
 - Track prompts
 
 ---
