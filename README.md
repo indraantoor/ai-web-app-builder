@@ -1,36 +1,300 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<center><h1>AI Web App Builder</h1></center>
 
-## Getting Started
+> **An AI powered full stack web application builder inspired by Lovable.**
+>
+> Generate React applications from natural language, edit them with AI, preview changes live, restore previous versions, export complete projects, and deploy it.
 
-First, run the development server:
+# Features
+
+## 🤖 AI Code Generation
+
+- Generate complete React applications from prompts
+- Streaming AI responses
+- Incremental file creation
+- Automatic project bootstrapping
+- Context-aware follow-up prompts
+- Edit existing applications
+- AI-powered refactoring
+
+## 🧠 Multiple AI Models
+
+Supports multiple providers including:
+
+- Claude
+- GPT-4o
+- Gemini
+- DeepSeek
+
+Features
+
+- Model switching
+- Vision support
+- Credit costs
+- Different speed tiers
+
+## ⚡ Live Development Environment
+
+- Monaco Editor
+- Sandpack Live Preview
+- Responsive preview
+- File explorer
+- Hot updates
+- VS Code-like experience
+
+## 📂 Version History
+
+- Automatic snapshots
+- Restore versions
+- File diff viewer
+- Timeline
+- AI generations history
+
+## 🛠 Auto Heal
+
+When compilation fails the application automatically
+
+- Detects errors
+- Sends repair prompts
+- Retries generation
+- Restores a working state
+
+## ☁ Cloud Native
+
+- Cloudflare Workers
+- Cloudflare R2
+- Cloudflare KV
+- Edge Runtime
+- Zero cold starts
+
+## 💳 SaaS
+
+- Clerk Authentication
+- Google Login
+- Subscription Plans
+- Credits
+- Usage Analytics
+
+## 📦 Export
+
+- ZIP Export
+- CodeSandbox Export
+
+---
+
+# Architecture
+
+```text
+User
+   │
+   ▼
+Next.js Frontend
+   │
+   ▼
+Cloudflare Worker API
+   │
+   ├────────► AI Providers
+   │             ├ Claude
+   │             ├ GPT
+   │             ├ Gemini
+   │             └ DeepSeek
+   │
+   ├────────► Cloudflare KV
+   ├────────► Cloudflare R2
+   │
+   ▼
+Sandpack Preview
+```
+
+---
+
+# Tech Stack
+
+## Frontend
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Monaco Editor
+- Sandpack
+
+## Backend
+
+- Cloudflare Workers
+- Hono
+- Cloudflare KV
+- Cloudflare R2
+
+## Authentication
+
+- Clerk
+
+## AI
+
+- Anthropic
+- OpenAI
+- Google Gemini
+- DeepSeek
+
+## Utilities
+
+- EventSource Parser
+- NanoID
+- fflate
+- JWT
+
+---
+
+# Getting Started
+
+## Prerequisites
+
+- Node.js 20+
+- npm
+- Cloudflare Account
+- Clerk Account
+
+## Installation
+
+```bash
+git clone https://github.com/yourusername/ai-web-app-builder.git
+
+cd ai-web-app-builder
+
+npm install
+```
+
+Run frontend
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run worker
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd worker
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+npm install
 
-## Learn More
+npx wrangler dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
 
-## Deploy on Vercel
+CLERK_SECRET_KEY=
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+NEXT_PUBLIC_WORKER_URL=
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+OPENAI_API_KEY=
+
+ANTHROPIC_API_KEY=
+
+GEMINI_API_KEY=
+
+DEEPSEEK_API_KEY=
+
+CLOUDFLARE_ACCOUNT_ID=
+
+R2_BUCKET=
+
+KV_NAMESPACE=
+```
+
+---
+
+# Core Features
+
+## AI Chat
+
+Describe an application in plain English.
+
+The selected model generates React code, streams files into the editor, updates the preview, and stores each generation as a new version.
+
+---
+
+## Live Preview
+
+Applications run inside Sandpack allowing instant previews without leaving the browser.
+
+---
+
+## Monaco Editor
+
+Browse and edit every generated file using Monaco.
+
+---
+
+## Version History
+
+Every generation creates a snapshot.
+
+- Restore any version
+- Compare changes
+- View diffs
+- Track prompts
+
+---
+
+## Auto Heal
+
+Compilation errors trigger an automated repair workflow.
+
+Maximum retry attempts: **3**
+
+---
+
+## Image-to-UI
+
+Paste screenshots or upload designs.
+
+Vision-enabled models generate matching interfaces.
+
+---
+
+## Analytics
+
+Track
+
+- AI generations
+- Projects
+- Credits
+- Model usage
+- Activity history
+
+---
+
+## Billing
+
+### Free
+
+- Monthly credits
+- Access to free models
+
+### Pro
+
+- Unlimited usage
+- Premium models
+- Export features
+
+---
+
+# License
+
+MIT
+
+---
+
+# Contact
+
+**Indraan S Toor**
+
+LinkedIn: https://linkedin.com/in/indraantoor
+
+GitHub: https://github.com/indraantoor
