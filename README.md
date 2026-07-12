@@ -30,7 +30,6 @@ Features
 - Model switching
 - Vision support
 - Credit costs
-- Different speed tiers
 
 ## ⚡ Live Development Environment
 
@@ -39,7 +38,7 @@ Features
 - Responsive preview
 - File explorer
 - Hot updates
-- VS Code-like experience
+- VS Code like experience
 
 ## 📂 Version History
 
@@ -57,14 +56,6 @@ When compilation fails the application automatically
 - Sends repair prompts
 - Retries generation
 - Restores a working state
-
-## ☁ Cloud Native
-
-- Cloudflare Workers
-- Cloudflare R2
-- Cloudflare KV
-- Edge Runtime
-- Zero cold starts
 
 ## 💳 SaaS
 
@@ -163,6 +154,10 @@ git clone https://github.com/yourusername/ai-web-app-builder.git
 cd ai-web-app-builder
 
 npm install
+
+cd worker
+
+npm install
 ```
 
 Run frontend
@@ -179,32 +174,6 @@ cd worker
 npm install
 
 npx wrangler dev
-```
-
----
-
-# Environment Variables
-
-```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-
-CLERK_SECRET_KEY=
-
-NEXT_PUBLIC_WORKER_URL=
-
-OPENAI_API_KEY=
-
-ANTHROPIC_API_KEY=
-
-GEMINI_API_KEY=
-
-DEEPSEEK_API_KEY=
-
-CLOUDFLARE_ACCOUNT_ID=
-
-R2_BUCKET=
-
-KV_NAMESPACE=
 ```
 
 ---
@@ -282,12 +251,6 @@ Track
 - Unlimited usage
 - Premium models
 - Export features
-
----
-
-# License
-
-MIT
 
 ---
 
