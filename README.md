@@ -156,7 +156,7 @@ Sandpack Preview
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/ai-web-app-builder.git
+git clone https://github.com/indraantoor/ai-web-app-builder
 
 cd ai-web-app-builder
 
